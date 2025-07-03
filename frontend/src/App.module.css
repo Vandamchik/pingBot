@@ -1,0 +1,12 @@
+body {
+  background: var(--tg-theme-bg-color);
+}
+
+.main__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
