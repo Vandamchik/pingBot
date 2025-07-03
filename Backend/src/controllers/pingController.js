@@ -4,8 +4,7 @@ const { CLIENT, ADMINISTRATOR } = require('../constants/userRoles');
 
 exports.handlePing = async (req, res, next, bot) => {
   try {
-    // const user = req.body;
-    const user = { mock: 'ini' };
+    const user = req.body;
 
     if (!user || Object.keys(user).length === 0)
         return res.status(400).json({ ok: false, message: 'No user data provided' });
