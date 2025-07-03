@@ -8,13 +8,13 @@ Backend/.env
 !Backend/.env.example
 
 # React (Frontend)
-Frontend/node_modules/
-Frontend/build/
-Frontend/dist/
-Frontend/.env
-Frontend/.DS_Store
-Frontend/.env
-!Frontend/.env.example
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+frontend/.env
+!frontend/.env.example
 
 # General system files
 *.log
