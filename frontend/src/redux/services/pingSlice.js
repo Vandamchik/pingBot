@@ -11,8 +11,6 @@ export const sendPing = createAsyncThunk(
           body: payload 
         })
 
-        console.log('response', data);
-
         return data
     } catch (err) {
         return thunkAPI.rejectWithValue(err.message);
