@@ -8,11 +8,15 @@ const routes = require('./src/routes');
 const connectDB = require('./src/config/db');
 const errorHandler = require('./src/middlewares/errorHandler');
 
-
 const app = express();
 const bot = new TelegramBot(BOT_TOKEN);
 
 const WEBHOOK_URL = `${FRONTEND_URL}/bot${BOT_TOKEN}`;
+
+app.post(`/api/bot${BOT_TOKEN}`, (req, res) => {
+    bot.processUpdate(req.body);
+    res.sendStatus(200);
+});
 
 app.use(express.json());
 app.use(cors())
